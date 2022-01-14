@@ -202,7 +202,10 @@ const theme = {
       colorDarkPurple2: '#B666FF',
       colorDarkPurple3: '#B368F9',
       colorPaleBrown1: '#E0D0D0',
-      colorLightBrown1: '#A77A7A'
+      colorLightBrown1: '#A77A7A',
+      colorTextRed: '#DA7F8F',
+      colorBackgroundPaleRed:'#FAF3F3',
+
     }
   };
   
