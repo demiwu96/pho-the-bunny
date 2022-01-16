@@ -1,15 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import theme from '../styles/index';
-import image from '../assets/images/profile image.jpg';
+import HomePageImg1 from 'assets/jpg/home-page-img-2.jpg';
 import { Row, Col } from 'reactstrap';
 
-// const AboutContainer = styled(Row)`
-// padding-top 80px;
-// `
-
 const Title = styled.h1`
-  color: ${theme.colors.colorTextRed};
+  color: ${({ theme }) => theme.colors.colorTextRed};
   margin-top: 20px;
   font-size: 3rem;
 `;
@@ -17,11 +12,11 @@ const Title = styled.h1`
 const Info = styled.p`
   i {
     font-size: 1.8rem;
-    color: ${theme.colors.colorTextRed};
+    color: ${({ theme }) => theme.colors.colorTextRed};
     padding: 0px 15px 0px 0px;
   }
   font-size: 1.8rem;
-  color: ${theme.colors.colorSemiDarkGray5};
+  color: ${({ theme }) => theme.colors.colorSemiDarkGray5};
 `;
 
 const PictureWrapper = styled.div`
@@ -62,15 +57,15 @@ const About = () => {
     // <AboutContainer>
     <>
       <Row>
-        <Title></Title>
+        <Title>123</Title>
       </Row>
       <Row>
         <Col xs={12} md={6}>
-        <PictureWrapper>
-            <img src={image} alt="Pho" height={350} />
+          <PictureWrapper>
+            <img src={HomePageImg1} alt="Pho" height={350} />
           </PictureWrapper>
         </Col>
-        <Col xs={12} md={6} style={{"padding-top": "50px"}}>
+        <Col xs={12} md={6} style={{ 'padding-top': '50px' }}>
           {renderProfileInfo()}
         </Col>
       </Row>

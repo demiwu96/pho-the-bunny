@@ -1,24 +1,23 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import theme from '../styles/index';
-import image from '../assets/images/home page image.jpg';
+import HomePageImg1 from 'assets/jpg/home-page-img-1.jpg';
 import { Row, Col, Container } from 'reactstrap';
-import About from './About';
-import PhotoCarousel from '../components/Carousel';
+import About from 'pages/About';
+import PhotoCarousel from 'components/Carousel';
 
 const HomeContainer = styled(Container)`
   padding: 80px;
-  background-color: ${theme.colors.colorBackgroundPaleGray};
+  background-color: ${({ theme }) => theme.colors.colorBackgroundPaleRed}
 `;
 
 const Title = styled.h1`
-  color: ${theme.colors.colorTextRed};
+  color: ${({ theme }) => theme.colors.colorTextRed};
   margin-top: 20px;
   font-size: 3rem;
 `;
 
 const Content = styled.div`
-  color: ${theme.colors.colorSemiDarkGray5};
+  color: ${({ theme }) => theme.colors.colorSemiDarkGray5};
   margin-top: 40px;
   font-size: 1.8rem;
 `;
@@ -37,7 +36,7 @@ const IconContainer = styled.span`
   margin-bottom: 30px;
   font-size: 3rem;
   display: inline-block;
-  color: ${theme.colors.colorTextRed};
+  color: ${({ theme }) => theme.colors.colorTextRed};
 `;
 
 const PictureWrapper = styled.div`
@@ -81,16 +80,18 @@ const Home = () => {
         </Col>
         <Col xs={12} md={6}>
           <PictureWrapper>
-            <img src={image} alt="Pho" height={500} />
+            <img src={HomePageImg1} alt="Pho" height={500} />
           </PictureWrapper>
         </Col>
       </Row>
       <About />
       <Row>
         <Col></Col>
-        <Col xs={8}><PhotoCarousel /></Col>
+        <Col xs={8}>
+          <PhotoCarousel />
+        </Col>
         <Col></Col>
-      </Row>   
+      </Row>
       <Footer xs={12}>Copyright © 2022, All Rights Reserved</Footer>
     </HomeContainer>
   );
