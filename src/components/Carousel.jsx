@@ -24,7 +24,7 @@ const PhotoCarousel = () => {
     {
       altText: 'Slide 2',
       key: 2,
-      src: 'https://i.ibb.co/474qnVn/slide-2.jpg'
+      src: 'https://i.ibb.co/M59Q93K/IMG-4248.jpg'
     },
     {
       altText: 'Slide 3',
@@ -35,6 +35,11 @@ const PhotoCarousel = () => {
       altText: 'Slide 4',
       key: 4,
       src: 'https://i.ibb.co/tHkRS61/slide-4.jpg'
+    },
+    {
+      altText: 'Slide 5',
+      key: 5,
+      src: 'https://i.ibb.co/WPCJhsw/IMG-4288.jpg'
     }
   ];
 

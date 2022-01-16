@@ -1,4 +1,4 @@
-import { Home, About } from 'pages';
+import { Home, About, Blog, Free, Games } from 'pages';
 
 const navRoutes = [
   {
@@ -8,6 +8,18 @@ const navRoutes = [
   {
     path: '/',
     Element: Home
+  },
+  {
+    path: '/blog',
+    Element: Blog
+  },
+  {
+    path: '/freestuff',
+    Element: Free
+  },
+  {
+    path: '/games',
+    Element: Games
   }
 ];
 

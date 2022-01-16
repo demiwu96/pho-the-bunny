@@ -79,7 +79,7 @@ const Home = () => {
           </PictureWrapper>
         </Col>
       </Row>
-      <Row>
+      <Row style={{paddingTop:'4rem'}}>
           <PhotoCarousel />
       </Row>
     </HomeContainer>
