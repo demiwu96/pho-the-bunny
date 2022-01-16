@@ -7,7 +7,6 @@ import PhotoCarousel from 'components/Carousel';
 
 const HomeContainer = styled(Container)`
   padding: 80px;
-  background-color: ${({ theme }) => theme.colors.colorBackgroundPaleRed}
 `;
 
 const Title = styled.h1`

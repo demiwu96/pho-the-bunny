@@ -27,7 +27,7 @@ const renderNavLink = (navTab) => {
 const TopNavBar = () => {
   return (
     <Navbar color="dark" dark expand="md" fixed="top">
-      <NavTitle href="/home">Pho the Bunny</NavTitle>
+      <NavTitle href="/">Pho the Bunny</NavTitle>
       <Nav className="me-auto" navbar>
         {renderNavLink(navTab)}
       </Nav>
