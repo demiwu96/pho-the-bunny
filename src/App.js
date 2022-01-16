@@ -9,10 +9,6 @@ const RootContainer = styled.div``;
 function App() {
   return (
     <RootContainer>
-      <head>
-        <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-        <script src="bower_components/aos/dist/aos.js"></script>
-      </head>
       <ThemeProvider theme={theme}>
         <TopNavBar />
         <Home />

@@ -3,7 +3,13 @@ import styled from 'styled-components';
 import { Carousel, CarouselItem, CarouselControl, Row } from 'reactstrap';
 
 const CarouselContainer = styled.div`
-  height: 300px;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+  }
 `;
 
 const PhotoCarousel = () => {
