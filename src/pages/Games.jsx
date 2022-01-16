@@ -1,9 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Title from 'components/Title';
+
 
 const Games = () => {
     return(
-        <p>games here</p>
+        <Title content={"Games"} iconClass={"fas fa-gamepad"}/>
     )
 }
 

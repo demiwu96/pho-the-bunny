@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Title from 'components/Title';
 import HomePageImg1 from 'assets/jpg/home-page-img-1.jpg';
 import { Row, Col, Container } from 'reactstrap';
 import PhotoCarousel from 'components/Carousel';
@@ -10,13 +11,6 @@ const HomeContainer = styled(Container)`
     padding: 1.5rem;
     text-align: center;
   }
-`;
-
-const Title = styled.h1`
-  color: ${({ theme }) => theme.colors.colorTextRed};
-  margin-top: 5rem;
-  font-size: 3rem;
-  padding-left: 2rem;
 `;
 
 const Content = styled.div`
@@ -52,9 +46,7 @@ const Home = () => {
     <HomeContainer fluid>
       <Row>
         <Col xs={12} md={6}>
-          <Title>
-            Hello, I am Pho <i class="far fa-heart"></i>
-          </Title>
+          <Title content={"Hello, I am Pho"} iconClass={"far fa-heart"} />
           <Content>
             Welcome to my website. You can:
             <ul>
