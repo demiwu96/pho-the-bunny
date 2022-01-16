@@ -22,15 +22,6 @@ const Content = styled.div`
   font-size: 1.8rem;
 `;
 
-const Footer = styled(Row)`
-  font-size: 0.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  font-style: italic;
-`;
-
 const IconContainer = styled.span`
   margin-left: 10%;
   margin-bottom: 30px;
@@ -92,7 +83,6 @@ const Home = () => {
         </Col>
         <Col></Col>
       </Row>
-      <Footer xs={12}>Copyright © 2022, All Rights Reserved</Footer>
     </HomeContainer>
   );
 };
