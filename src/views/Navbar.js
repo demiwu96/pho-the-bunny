@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Nav, Navbar, NavbarBrand, NavItem, NavLink } from 'reactstrap';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const NavTitle = styled(NavbarBrand)`
 font-size: 1.7rem;
