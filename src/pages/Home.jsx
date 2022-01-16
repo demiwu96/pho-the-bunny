@@ -2,24 +2,28 @@ import * as React from 'react';
 import styled from 'styled-components';
 import HomePageImg1 from 'assets/jpg/home-page-img-1.jpg';
 import { Row, Col, Container } from 'reactstrap';
-import About from 'pages/About';
 import PhotoCarousel from 'components/Carousel';
 
 const HomeContainer = styled(Container)`
-  padding: 5rem;
-  background-color: ${({ theme }) => theme.colors.colorBackgroundPaleRed}
+  padding: 3rem;
+  .carousel{
+    padding: 1.5rem;
+    text-align: center;
+  }
 `;
 
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.colorTextRed};
   margin-top: 5rem;
   font-size: 3rem;
+  padding-left: 2rem;
 `;
 
 const Content = styled.div`
   color: ${({ theme }) => theme.colors.colorSemiDarkGray5};
   margin-top: 3rem;
   font-size: 1.8rem;
+  padding-left: 2rem;
 `;
 
 const IconContainer = styled.span`
@@ -75,13 +79,8 @@ const Home = () => {
           </PictureWrapper>
         </Col>
       </Row>
-      <About />
       <Row>
-        <Col></Col>
-        <Col xs={8}>
           <PhotoCarousel />
-        </Col>
-        <Col></Col>
       </Row>
     </HomeContainer>
   );

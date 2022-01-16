@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Carousel, CarouselItem, CarouselControl, Row } from 'reactstrap';
+import { Carousel, CarouselItem, CarouselControl } from 'reactstrap';
 
 const CarouselContainer = styled.div`
   display: flex;

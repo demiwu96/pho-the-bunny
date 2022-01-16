@@ -3,17 +3,14 @@ import styled from 'styled-components';
 import HomePageImg1 from 'assets/jpg/home-page-img-2.jpg';
 import { Row, Col } from 'reactstrap';
 
-const Title = styled.h1`
-  color: ${({ theme }) => theme.colors.colorTextRed};
-  margin-top: 5rem;
-  font-size: 3rem;
-`;
-
 const Info = styled.p`
-  i {
+  .fa-carrot {
     font-size: 1.8rem;
     color: ${({ theme }) => theme.colors.colorTextRed};
     padding: 0px 15px 0px 0px;
+  }
+  .fa-mars{
+    color:${({theme})=>theme.colors.colorMediumBlue2};
   }
   font-size: 1.6rem;
   color: ${({ theme }) => theme.colors.colorSemiDarkGray5};
@@ -34,14 +31,10 @@ const PictureWrapper = styled.div`
 
 const About = () => {
   const infoList = [
-    'Name: Pho',
     'Age: 1yr 3mths',
     'Breed: American',
     'Favorite food: cilantro, banana, carrots',
-    'Hobby: eat & sleep, renovate my home',
-    '',
-    '',
-    ''
+    'Hobby: eat & sleep, renovate my home'
   ];
 
   const renderProfileInfo = () => {
@@ -55,22 +48,21 @@ const About = () => {
 
   return (
     <>
-      <Row>
-        <Title>123</Title>
-      </Row>
-      <Row>
+      <Row style={{ 'padding-top': '3rem' }}>
         <Col xs={12} md={6}>
           <PictureWrapper>
             <img src={HomePageImg1} alt="Pho" height={350} />
           </PictureWrapper>
         </Col>
-        <Col xs={12} md={6} style={{ 'padding-top': '50px' }}>
+        <Col xs={12} md={6} style={{ 'padding-top': '5rem' }}>
+        <Info>
+        <i class="fas fa-carrot"></i>
+        Name: Pho <i class="fas fa-mars"></i>
+      </Info>
           {renderProfileInfo()}
         </Col>
       </Row>
     </>
-
-    // </AboutContainer>
   );
 };
 
