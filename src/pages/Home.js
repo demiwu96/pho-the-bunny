@@ -6,25 +6,25 @@ import About from 'pages/About';
 import PhotoCarousel from 'components/Carousel';
 
 const HomeContainer = styled(Container)`
-  padding: 80px;
+  padding: 5rem;
   background-color: ${({ theme }) => theme.colors.colorBackgroundPaleRed}
 `;
 
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.colorTextRed};
-  margin-top: 20px;
+  margin-top: 5rem;
   font-size: 3rem;
 `;
 
 const Content = styled.div`
   color: ${({ theme }) => theme.colors.colorSemiDarkGray5};
-  margin-top: 40px;
+  margin-top: 3rem;
   font-size: 1.8rem;
 `;
 
 const IconContainer = styled.span`
   margin-left: 10%;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   font-size: 3rem;
   display: inline-block;
   color: ${({ theme }) => theme.colors.colorTextRed};
@@ -33,11 +33,11 @@ const IconContainer = styled.span`
 const PictureWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 4rem;
   position: relative;
   overflow: hidden;
-  width: 379px;
-  height: 500px;
+  width: 25rem;
+  height: 33rem;
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
   transform: rotate(-2deg);
   border: 15px solid #fff;

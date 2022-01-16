@@ -5,7 +5,7 @@ import { Row, Col } from 'reactstrap';
 
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.colorTextRed};
-  margin-top: 20px;
+  margin-top: 5rem;
   font-size: 3rem;
 `;
 
@@ -15,18 +15,18 @@ const Info = styled.p`
     color: ${({ theme }) => theme.colors.colorTextRed};
     padding: 0px 15px 0px 0px;
   }
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: ${({ theme }) => theme.colors.colorSemiDarkGray5};
 `;
 
 const PictureWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 4rem;
   position: relative;
   overflow: hidden;
-  width: 490px;
-  height: 350px;
+  width: 30rem;
+  height: 23.8rem;
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
   transform: rotate(-2deg);
   border: 15px solid #fff;
@@ -54,7 +54,6 @@ const About = () => {
   };
 
   return (
-    // <AboutContainer>
     <>
       <Row>
         <Title>123</Title>
