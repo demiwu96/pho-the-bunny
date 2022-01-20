@@ -1,4 +1,4 @@
-import { Home, About, Blog, Free, Games } from 'pages';
+import { Home, About, Blog, Free, GamesGallery, GamePage } from 'pages';
 
 const navRoutes = [
   {
@@ -19,7 +19,15 @@ const navRoutes = [
   },
   {
     path: '/games',
-    Element: Games
+    Element: GamesGallery
+  },
+  {
+    path: '/games/eat-all-carrots',
+    Element: GamePage
+  },
+  {
+    path: '/games/how-high-can-you-jump',
+    Element: GamePage
   }
 ];
 
