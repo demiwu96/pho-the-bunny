@@ -18,10 +18,6 @@ const CardButton = styled(Button)`
   border: none;
   font-size: 1.5rem;
   width: 100%;
-  a{
-    color:inherit;
-    text-decoration:none;
-  }
 `;
 
 const DisplayCard = ({ item }) => {
@@ -38,7 +34,7 @@ const DisplayCard = ({ item }) => {
         <CardText className="text-muted">
         {item.text}
         </CardText>
-        <CardButton><a href={item.url}>Play</a></CardButton>
+        <a href={item.url}><CardButton>Play</CardButton></a>
       </CardBody>
     </StyledCard>
   );

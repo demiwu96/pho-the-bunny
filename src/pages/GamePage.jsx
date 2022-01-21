@@ -2,24 +2,13 @@ import * as React from 'react';
 import styled from 'styled-components';
 import CountdownTimer from 'components/CountdownTimer';
 import { Button } from 'reactstrap';
+import GameHeader from 'components/GameHeader';
 
 const GameContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 1rem 5rem 0rem 5rem;
   margin-bottom: 3rem;
-`;
-
-const GameTitle = styled.h2`
-  padding-top: 6rem;
-  text-align: center;
-  color: ${({ theme }) => theme.colors.colorTextRed};
-`;
-
-const Description = styled.p`
-  color: ${({ theme }) => theme.colors.colorSemiDarkGray5};
-  text-align: center;
-  padding: 1rem 2rem;
 `;
 
 const StartButton = styled(Button)`
@@ -37,6 +26,7 @@ const GamePage = () => {
   const [showButton, setShowButton] = React.useState(true);
   const [backgroundColor, setBackgroundColor] = React.useState("#CACACA");
   const [startTime, setStartTime] = React.useState();
+  const [isGameStart, setIsGameStart] = React.useState(false);
 
   const GameArea = styled.div`
     background-color: ${backgroundColor};
@@ -45,25 +35,22 @@ const GamePage = () => {
     text-align: center;  
   `;
 
-  const StartTheGame = () => {
+  const StartGame = () => {
     setShowButton(false);
     setBackgroundColor("#fff");
     setStartTime(60);
+    setIsGameStart(true);
   };
 
   return (
     <div>
-      <GameTitle>Eat All Carrots</GameTitle>
-      <Description>
-        Click the carrot when it appears on the screen. See how many can you get
-        in 1 minute. Click the button to start.
-      </Description>
+      <GameHeader title="Eat All Carrots" gameDescription="" />
       <GameContainer>
         <GameArea>
-        <CountdownTimer startTime={startTime} />
+        <CountdownTimer startTime={startTime} isGameStart={isGameStart} />
           {showButton && (
             <StartButton
-              onClick={StartTheGame}
+              onClick={StartGame}
             >
               Start
             </StartButton>

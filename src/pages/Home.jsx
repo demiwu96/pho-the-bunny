@@ -59,9 +59,9 @@ const Home = () => {
           </Content>
           <Row>
             <IconContainer>
-              <i class="fab fa-instagram" style={{ margin: '10px 20px' }}></i>
-              <i class="fab fa-tiktok" style={{ margin: '10px 20px' }}></i>
-              <i class="fab fa-youtube" style={{ margin: '10px 20px' }}></i>
+              <i className="fab fa-instagram" style={{ margin: '10px 20px' }}></i>
+              <i className="fab fa-tiktok" style={{ margin: '10px 20px' }}></i>
+              <i className="fab fa-youtube" style={{ margin: '10px 20px' }}></i>
             </IconContainer>
           </Row>
         </Col>

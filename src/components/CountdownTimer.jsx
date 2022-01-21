@@ -8,7 +8,7 @@ const Time = styled.p`
   color: ${({ theme }) => theme.colors.colorTextRed};
 `;
 
-const CountdownTimer = ({ startTime }) => {
+const CountdownTimer = ({ startTime, isGameStart }) => {
   const [timeLeftState, setTimeLeft] = React.useState(startTime);
 
   const startTimer = () => {
@@ -24,6 +24,12 @@ const CountdownTimer = ({ startTime }) => {
     };
     timerInterval = setInterval(countDown, 1000);
   };
+
+  React.useEffect(()=>{
+    if (isGameStart){
+      startTimer();
+    }
+  }, []);
 
   return (
     <>

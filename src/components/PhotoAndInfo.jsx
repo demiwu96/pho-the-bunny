@@ -32,9 +32,9 @@ const PhotoAndInfo = ({nameArray, infoArray, photo, imgAlt})=>{
     const renderNameAndGenderIcon = (nameArray)=>{
         return nameArray.map((item) => (
           <Info>
-            <i class="fas fa-carrot"></i>
+            <i className="fas fa-carrot"></i>
             Name: {item.name}
-            <i class={`genderIcon ${item.genderIcon}`}></i>
+            <i className={`genderIcon ${item.genderIcon}`}></i>
           </Info>
         ))
       };
@@ -42,7 +42,7 @@ const PhotoAndInfo = ({nameArray, infoArray, photo, imgAlt})=>{
       const renderProfileInfo = (infoArray) => {
         return infoArray.map((item) => (
           <Info>
-            <i class="fas fa-carrot"></i>
+            <i className="fas fa-carrot"></i>
             {item}
           </Info>
         ));

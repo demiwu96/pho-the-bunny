@@ -8,7 +8,7 @@ const PinkTitle = styled.h1`
 `;
 
 const Title = ({content, iconClass}) => {
-  return <PinkTitle>{content} <i class={iconClass}></i></PinkTitle>;
+  return <PinkTitle>{content} <i className={iconClass}></i></PinkTitle>;
 };
 
 export default Title;
