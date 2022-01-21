@@ -7,7 +7,7 @@ import GameHeader from 'components/GameHeader';
 const GameContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 1rem 5rem 0rem 5rem;
+  padding: 0rem 5rem 0rem 5rem;
   margin-bottom: 3rem;
 `;
 
@@ -22,7 +22,7 @@ const StartButton = styled(Button)`
   }
 `;
 
-const GamePage = () => {
+const GamePage = ({gameInfo}) => {
   const [showButton, setShowButton] = React.useState(true);
   const [backgroundColor, setBackgroundColor] = React.useState("#CACACA");
   const [startTime, setStartTime] = React.useState();
@@ -44,7 +44,7 @@ const GamePage = () => {
 
   return (
     <div>
-      <GameHeader title="Eat All Carrots" gameDescription="" />
+      <GameHeader title={gameInfo.title} gameDescription={gameInfo.description} />
       <GameContainer>
         <GameArea>
         <CountdownTimer startTime={startTime} isGameStart={isGameStart} />
