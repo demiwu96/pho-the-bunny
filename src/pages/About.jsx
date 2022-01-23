@@ -16,7 +16,7 @@ const About = () => {
 
   return (
     <>
-    <PhotoAndInfo nameArray={name} infoArray={infoList} photo={HomePageImg1} imgAlt={"Pho the bunny"}/>
+    <PhotoAndInfo nameArray={name} infoArray={infoList} photo={HomePageImg1} imgAlt={"Pho2 the bunny"}/>
     </>
   );
 };
