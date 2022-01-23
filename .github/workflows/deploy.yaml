@@ -1,0 +1,41 @@
+# name: deploy
+# on:
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+#   heroku-deploy
+    
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     # Uses basically is using a public defined action, whereas - name and run is our own step
+#       - name: Run check script
+#         run: echo Checking...
+
+#       - uses: actions/checkout@v1
+#       - uses: actions/setup-node@v1
+#       with:
+#         node-versions: 14
+
+#       - name: Install Yarn
+#         run: npm i yarn
+
+#       - name: Install package.json
+#         run: yarn install
+
+#       - name: Build
+#         run: yarn build
+
+#       - name: Login to Heroku
+#         env:
+#           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+#         run: heroku container:login
+
+#       - name: deploy
+#         run: 
+
+#       - name: Run finish check 
+#         run: echo Finished!
+  
