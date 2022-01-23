@@ -22,9 +22,9 @@ const StartButton = styled(Button)`
   }
 `;
 
-const GamePage = ({gameInfo}) => {
+const GamePage = ({ gameInfo }) => {
   const [showButton, setShowButton] = React.useState(true);
-  const [backgroundColor, setBackgroundColor] = React.useState("#CACACA");
+  const [backgroundColor, setBackgroundColor] = React.useState('#CACACA');
   const [startTime, setStartTime] = React.useState();
   const [isGameStart, setIsGameStart] = React.useState(false);
 
@@ -32,29 +32,26 @@ const GamePage = ({gameInfo}) => {
     background-color: ${backgroundColor};
     height: 30rem;
     flex: 1 1 15rem;
-    text-align: center;  
+    text-align: center;
   `;
 
   const StartGame = () => {
     setShowButton(false);
-    setBackgroundColor("#fff");
+    setBackgroundColor('#fff');
     setStartTime(60);
     setIsGameStart(true);
   };
 
   return (
     <div>
-      <GameHeader title={gameInfo.title} gameDescription={gameInfo.description} />
+      <GameHeader
+        title={gameInfo.title}
+        gameDescription={gameInfo.description}
+      />
       <GameContainer>
         <GameArea>
-        <CountdownTimer startTime={startTime} isGameStart={isGameStart} />
-          {showButton && (
-            <StartButton
-              onClick={StartGame}
-            >
-              Start
-            </StartButton>
-          )}
+          <CountdownTimer startTime={startTime} isGameStart={isGameStart} />
+          {showButton && <StartButton onClick={StartGame}>Start</StartButton>}
         </GameArea>
       </GameContainer>
     </div>
