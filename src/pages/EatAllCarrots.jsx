@@ -69,6 +69,7 @@ const EatAllCarrots = () => {
       'Click as many carrots as you can in 1 minute. Press the button to start the game.'
   };
 
+const EatAllCarrots = () => {
   return (
     <EatAllCarrotsWrapper>
       <GamePage

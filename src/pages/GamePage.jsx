@@ -22,8 +22,8 @@ const StartButton = styled(Button)`
   }
 `;
 
-
 const GamePage = ({ gameInfo, childComponent }) => {
+
   const [showButton, setShowButton] = React.useState(true);
   const [backgroundColor, setBackgroundColor] = React.useState('#CACACA');
   const [startTime, setStartTime] = React.useState();
