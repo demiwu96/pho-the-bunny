@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Time = styled.p`
   padding-top: 1rem;
+  padding-left: 2rem;
   font-size: 3rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.colorTextRed};
@@ -17,7 +18,6 @@ const CountdownTimer = ({ startTime, isGameStart }) => {
       let seconds = startTime - 1;
       startTime = seconds;
       setTimeLeft(seconds);
-      console.log(seconds);
       if (seconds === 0) {
         clearInterval(timerInterval);
       }
