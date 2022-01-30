@@ -1,4 +1,4 @@
-import { Home, About, Blog, Free, GamesGallery, GamePage, EatAllCarrots } from 'pages';
+import { Home, About, Blog, Free, GamesGallery, GamePage, EatAllCarrots, ToDoList } from 'pages';
 
 const navRoutes = [
   {
@@ -14,7 +14,7 @@ const navRoutes = [
     Element: Blog
   },
   {
-    path: '/freestuff',
+    path: '/freeapp',
     Element: Free
   },
   {
@@ -28,6 +28,10 @@ const navRoutes = [
   {
     path: '/games/how-high-can-you-jump',
     Element: GamePage
+  },
+  {
+    path: '/phothebunny/calendar',
+    Element: ToDoList
   }
 ];
 

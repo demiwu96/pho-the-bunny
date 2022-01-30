@@ -11,6 +11,8 @@ import styled from 'styled-components';
 const StyledCard = styled(Card)`
   margin: 1rem 1rem;
   flex: 0 1 22rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
 `;
 
 const CardButton = styled(Button)`
@@ -34,7 +36,7 @@ const DisplayCard = ({ item }) => {
         <CardText className="text-muted">
         {item.text}
         </CardText>
-        <a href={item.url}><CardButton>Play</CardButton></a>
+        <a href={item.url}><CardButton>{item.button}</CardButton></a>
       </CardBody>
     </StyledCard>
   );
