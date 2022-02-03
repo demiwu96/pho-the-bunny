@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import styled from 'styled-components';
-import theme from 'styles';
 
 const TaskRow = styled.div`
   font-size: 1.8rem;
@@ -39,16 +37,16 @@ const TaskRow = styled.div`
   }
 `;
 
-const Task = ({ item }) => {
+const Task = ({ item, completeTask, deleteTask }) => {
   return (
     <TaskRow>
       {item.completed ? (
-        <i class="fas fa-check-square completed"></i>
+        <i className="fas fa-check-square completed"></i>
       ) : (
-        <i class="far fa-check-square"></i>
+        <i className="far fa-check-square" onClick={completeTask}></i>
       )}
       {item.text}
-      <i class="fas fa-times"></i>
+      <i className="fas fa-times" onClick={deleteTask}></i>
     </TaskRow>
   );
 };

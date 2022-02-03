@@ -52,8 +52,16 @@ const ToDoList = () => {
   const [taskList, setTaskList] = useState([...temptaskList]);
   const [currentDate, setCurrentDate] = useState(moment().format('MMM Do'));
 
-  const renderTasks = () => {
-    return taskList.map((item) => <Task item={item} />);
+  const completeTask = ()=>{
+    console.log("this is completed");
+  }
+
+  const deleteTask = ()=>{
+    console.log("deleted");
+  }
+
+  const renderTasks = (index) => {
+    return taskList.map((item) => <Task key={index} item={item} />);
   };
 
   const AddTaskToList = () => {
@@ -82,7 +90,7 @@ const ToDoList = () => {
   return (
     <Container fluid>
       <i
-        class="fas fa-chevron-left"
+        className="fas fa-chevron-left"
         onClick={() => {
           goToPrevDay();
         }}
@@ -91,7 +99,7 @@ const ToDoList = () => {
         {currentDate === moment().format('MMM Do') ? 'Today' : currentDate}
       </DateText>
       <i
-        class="fas fa-chevron-right"
+        className="fas fa-chevron-right"
         onClick={() => {
           goToNextDay();
         }}
@@ -102,7 +110,7 @@ const ToDoList = () => {
           setIsModalOpen(true);
         }}
       >
-        <i class="fas fa-plus"></i> New Task
+        <i className="fas fa-plus"></i> New Task
       </AddButton>
       <Modal centered returnFocusAfterClose={false} isOpen={isModalOpen}>
         <ModalHeader>Add New Task</ModalHeader>
