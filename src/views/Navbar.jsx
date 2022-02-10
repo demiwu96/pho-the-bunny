@@ -25,7 +25,7 @@ const navTab = [
   { label: 'About', url: '/about' },
   { label: 'Play With Me', url: '/games' },
   { label: 'Blog', url: '/blog' },
-  {label: 'Free', url:'/freestuff'}
+  {label: 'Free', url:'/freeapp'}
 ];
 
 const renderNavLink = (navTab) => {

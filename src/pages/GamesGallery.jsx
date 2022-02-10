@@ -14,13 +14,15 @@ const gameList = [{
     text:"Help Pho eat as much carrots in 1 minute",
     imgAlt: "carrots",
     src:"https://i.pinimg.com/originals/a9/74/a0/a974a07fa8fb4b9e52f7cbd785e86cd5.jpg",
-    url:"/games/eat-all-carrots"
+    url:"/games/eat-all-carrots",
+    button: "Play"
 },{
     title: "How High Can You Jump",
     text:"",
     imgAlt: "",
     src:"https://c.tenor.com/pHI9FN2hLpUAAAAM/run-nyoom.gif",
-    url:"/games/how-high-can-you-jump"
+    url:"/games/how-high-can-you-jump",
+    button: "Play"
 }];
 
 const renderGameCards = () => {
