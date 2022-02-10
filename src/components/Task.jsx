@@ -1,30 +1,33 @@
 import styled from 'styled-components';
 
 const TaskRow = styled.div`
+  display: flex;
   font-size: 1.8rem;
   background-color: ${({ theme }) => theme.colors.colorPureWhite};
   width: 80%;
   border-radius: 1rem;
   margin-bottom: 0.5rem;
   box-shadow: 5px 5px 5px #aaaaaa;
-  .far {
+  padding: 0.2rem;
+  .fa-check-square{
     margin-left: 1rem;
     margin-right: 0.5rem;
-    color: ${({ theme }) => theme.colors.colorMediumGray12};
+    padding-top: 0.5rem;
     cursor: pointer;
     :hover {
       color: ${({ theme }) => theme.colors.colorHoverCheckboxGreen};
     }
+  }
+  .far {
+    color: ${({ theme }) => theme.colors.colorMediumGray12};
   }
   .completed {
-    margin-left: 1rem;
-    margin-right: 0.5rem;
-    cursor: pointer;
     color: ${({ theme }) => theme.colors.colorCompletedGreen};
-    :hover {
-      color: ${({ theme }) => theme.colors.colorHoverCheckboxGreen};
-    }
   }
+`;
+
+const CloseButtonContainer = styled.span`
+flex: 1;
   .fa-times {
     color: ${({ theme }) => theme.colors.colorMediumGray12};
     float: right;
@@ -46,7 +49,9 @@ const Task = ({ item, completeTask, deleteTask }) => {
         <i className="far fa-check-square" onClick={completeTask}></i>
       )}
       {item.text}
-      <i className="fas fa-times" onClick={deleteTask}></i>
+      <CloseButtonContainer>
+        <i className="fas fa-times" onClick={deleteTask}></i>
+      </CloseButtonContainer>
     </TaskRow>
   );
 };
