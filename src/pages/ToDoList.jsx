@@ -37,40 +37,39 @@ const AddButton = styled(Button)`
   margin-bottom: 1rem;
 `;
 
+const temptaskList = [
+  { text: 'Cooking', completed: true },
+  {
+    text: 'This is a long long long long long long long long long long long long long long long long task',
+    completed: false
+  },
+  { text: 'Cleaning', completed: true },
+  { text: 'Go grocery', completed: false }
+];
+
 const ToDoList = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
-  const temptaskList = [
-    { text: 'Cooking', completed: true },
-    {
-      text: 'This is a long long long long long long long long long long long long long long long long task',
-      completed: false
-    },
-    { text: 'Cleaning', completed: true },
-    { text: 'Go grocery', completed: false }
-  ];
-  const [taskList, setTaskList] = useState([...temptaskList]);
+  const [taskList, setTaskList] = useState(temptaskList);
   const [currentDate, setCurrentDate] = useState(moment().format('MMM Do'));
 
-  const completeTask = ()=>{
-    console.log("this is completed");
-  }
-
-  const deleteTask = ()=>{
-    console.log("deleted");
-  }
-
-  const renderTasks = (index) => {
-    return taskList.map((item) => <Task key={index} item={item} />);
+  const completeTask = () => {
+    console.log('this is completed');
   };
 
-  const AddTaskToList = () => {
+  const deleteTask = () => {
+    console.log('deleted');
+  };
+
+  const renderTasks = (index) => {
+    return taskList.map((item) => <Task key={index} item={item} completeTask={completeTask} deleteTask={deleteTask} />);
+  };
+
+  const addTaskToList = () => {
     setInputValue('');
     setIsModalOpen(!isModalOpen);
-    let newTaskList = [[...taskList], { text: inputValue, completed: false }];
+    let newTaskList = [...taskList, { text: inputValue, completed: false }];
     setTaskList(newTaskList);
-    console.log(taskList);
-    renderTasks();
   };
 
   const goToNextDay = () => {
@@ -87,23 +86,15 @@ const ToDoList = () => {
     setCurrentDate(newDate);
   };
 
+  const closeModal = () => setIsModalOpen(false)
+
   return (
     <Container fluid>
-      <i
-        className="fas fa-chevron-left"
-        onClick={() => {
-          goToPrevDay();
-        }}
-      ></i>
+      <i className="fas fa-chevron-left" onClick={goToPrevDay}></i>
       <DateText>
         {currentDate === moment().format('MMM Do') ? 'Today' : currentDate}
       </DateText>
-      <i
-        className="fas fa-chevron-right"
-        onClick={() => {
-          goToNextDay();
-        }}
-      ></i>
+      <i className="fas fa-chevron-right" onClick={goToNextDay}></i>
       <AddButton
         color="light"
         onClick={() => {
@@ -126,19 +117,11 @@ const ToDoList = () => {
         <ModalFooter>
           <Button
             color="primary"
-            onClick={() => {
-              AddTaskToList();
-            }}
+            onClick={addTaskToList}
           >
             Done
           </Button>{' '}
-          <Button
-            onClick={() => {
-              setIsModalOpen(!isModalOpen);
-            }}
-          >
-            Cancel
-          </Button>
+          <Button onClick={closeModal}>Cancel</Button>
         </ModalFooter>
       </Modal>
       {renderTasks()}
